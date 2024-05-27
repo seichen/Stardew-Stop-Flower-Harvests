@@ -1,0 +1,8 @@
+C:\Users\sabri\code\StardewNoFlowerHarvest\StardewNoFlowerHarvest\bin\Debug\net6.0\StopFlowerHarvests.deps.json
+C:\Users\sabri\code\StardewNoFlowerHarvest\StardewNoFlowerHarvest\bin\Debug\net6.0\StopFlowerHarvests.dll
+C:\Users\sabri\code\StardewNoFlowerHarvest\StardewNoFlowerHarvest\obj\Debug\net6.0\StopFlowerHarvests.csproj.AssemblyReference.cache
+C:\Users\sabri\code\StardewNoFlowerHarvest\StardewNoFlowerHarvest\obj\Debug\net6.0\StopFlowerHarvests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabri\code\StardewNoFlowerHarvest\StardewNoFlowerHarvest\obj\Debug\net6.0\StopFlowerHarvests.AssemblyInfoInputs.cache
+C:\Users\sabri\code\StardewNoFlowerHarvest\StardewNoFlowerHarvest\obj\Debug\net6.0\StopFlowerHarvests.AssemblyInfo.cs
+C:\Users\sabri\code\StardewNoFlowerHarvest\StardewNoFlowerHarvest\obj\Debug\net6.0\StopFlowerHarvests.csproj.CoreCompileInputs.cache
+C:\Users\sabri\code\StardewNoFlowerHarvest\StardewNoFlowerHarvest\obj\Debug\net6.0\StopFlowerHarvests.dll
