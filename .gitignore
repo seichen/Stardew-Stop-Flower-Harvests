@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/StardewNoFlowerHarvest/.vs/StardewNoFlowerHarvest/FileContentIndex
+/StardewNoFlowerHarvest/StardewNoFlowerHarvest/obj/Debug/net6.0
+/StardewNoFlowerHarvest/StardewNoFlowerHarvest/obj/project.assets.json
+/StardewNoFlowerHarvest/StardewNoFlowerHarvest/obj/project.nuget.cache
+/StardewNoFlowerHarvest/StardewNoFlowerHarvest/obj/StopFlowerHarvests.csproj.nuget.dgspec.json
+/StardewNoFlowerHarvest/StardewNoFlowerHarvest/obj/StopFlowerHarvests.csproj.nuget.g.props
+/StardewNoFlowerHarvest/StardewNoFlowerHarvest/obj/StopFlowerHarvests.csproj.nuget.g.targets
+/.vs/StardewStopFlowerHarvests/v17/.wsuo
+/.vs/StardewStopFlowerHarvests/v17/DocumentLayout.json
