@@ -9,7 +9,6 @@ namespace StopFlowerHarvests
 {
     public sealed class ModConfig
     {
-        public KeybindList OpenMenu { get; set; } = KeybindList.Parse("o");
         public bool FairyRose { get; set; } = true;
     }
 }
