@@ -7,12 +7,16 @@ using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.GameData.Crops;
+using GenericModConfigMenu;
 
 namespace StopFlowerHarvests
 {
     /// <summary>The mod entry point.</summary>
     internal sealed class ModEntry : Mod
     {
+
+        public static ModConfig Config;
+        private IGenericModConfigMenuApi? configMenu;
         /*********
         ** Public methods
         *********/
@@ -21,6 +25,7 @@ namespace StopFlowerHarvests
         public override void Entry(IModHelper helper)
         {
             var harmony = new Harmony(this.ModManifest.UniqueID);
+            Config = this.Helper.ReadConfig<ModConfig>();
 
             // example patch, you'll need to edit this for your patch
             harmony.Patch(
@@ -28,6 +33,8 @@ namespace StopFlowerHarvests
                postfix: new HarmonyMethod(typeof(Patch), nameof(Patch.Postfix_GetHarvestMethod))
             );
             //helper.Events.World.DebrisListChanged += this.CheckObjectListChanged;
+
+            helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
         }
 
 
@@ -37,17 +44,40 @@ namespace StopFlowerHarvests
         /// <summary>Raised after the player presses a button on the keyboard, controller, or mouse.</summary>
         /// <param name="sender">The event sender.</param>
         /// <param name="e">The event data.</param>
+        private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
+        {
+            // get Generic Mod Config Menu's API (if it's installed)
+            this.configMenu = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (this.configMenu is null)
+                return;
+
+            // register mod
+            this.configMenu.Register(
+                mod: ModManifest,
+                reset: () => Config = new ModConfig(),
+                save: () => this.Helper.WriteConfig(Config)
+            );
+
+            // add some config options
+            this.configMenu.AddBoolOption(
+                mod: ModManifest,
+                name: () => "Fairy Rose",
+                tooltip: () => "Checking this will turn on scythe only harvesting.",
+                getValue: () => Config.FairyRose,
+                setValue: value => Config.FairyRose = value
+            );
+        }
         //private void CheckObjectListChanged(object? sender, DebrisListChangedEventArgs e)
         //{
-            // ignore if player hasn't loaded a save yet
-            //if (!Context.IsWorldReady)
-                //return;
+        // ignore if player hasn't loaded a save yet
+        //if (!Context.IsWorldReady)
+        //return;
 
-            // print button presses to the console window
-            //foreach (StardewValley.Debris kvp in e.Removed)
-            //{
-                //this.Monitor.Log($"{Game1.player.Name} removed {kvp.itemId}.", LogLevel.Debug);
-            //}
+        // print button presses to the console window
+        //foreach (StardewValley.Debris kvp in e.Removed)
+        //{
+        //this.Monitor.Log($"{Game1.player.Name} removed {kvp.itemId}.", LogLevel.Debug);
+        //}
         //}
     }
 }

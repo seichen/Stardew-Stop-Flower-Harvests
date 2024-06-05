@@ -15,7 +15,7 @@ namespace StopFlowerHarvests
         {
             try
             {
-                if (__instance.GetData().HarvestItemId.Equals("595"))
+                if (__instance.GetData().HarvestItemId.Equals("595") && ModEntry.Config.FairyRose)
                 {
                     return HarvestMethod.Scythe;
                 }
