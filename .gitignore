@@ -19,3 +19,9 @@
 /StardewNoFlowerHarvest/StardewNoFlowerHarvest/bin/Debug/net6.0/StopFlowerHarvests.deps.json
 /StardewNoFlowerHarvest/StardewNoFlowerHarvest/bin/Debug/net6.0/StopFlowerHarvests.dll
 /StardewNoFlowerHarvest/StardewNoFlowerHarvest/bin/Debug/net6.0/StopFlowerHarvests 1.0.2.zip
+/.vs
+/StardewNoFlowerHarvest/StardewNoFlowerHarvest/obj/Release/net6.0
+*.v2
+/StardewNoFlowerHarvest/.vs/ProjectEvaluation/stardewnoflowerharvest.strings.v8.bin
+/StardewNoFlowerHarvest/.vs/ProjectEvaluation/stardewnoflowerharvest.projects.v8.bin
+/StardewNoFlowerHarvest/.vs/ProjectEvaluation/stardewnoflowerharvest.metadata.v8.bin
