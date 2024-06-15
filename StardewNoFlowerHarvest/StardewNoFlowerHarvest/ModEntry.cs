@@ -66,6 +66,20 @@ namespace StopFlowerHarvests
                 getValue: () => Config.FairyRose,
                 setValue: value => Config.FairyRose = value
             );
+            this.configMenu.AddBoolOption(
+                mod: ModManifest,
+                name: () => "Poppy",
+                tooltip: () => "Checking this will turn on scythe only harvesting.",
+                getValue: () => Config.Poppy,
+                setValue: value => Config.Poppy = value
+            );
+            this.configMenu.AddBoolOption(
+                mod: ModManifest,
+                name: () => "Blue Jazz",
+                tooltip: () => "Checking this will turn on scythe only harvesting.",
+                getValue: () => Config.BlueJazz,
+                setValue: value => Config.BlueJazz = value
+            );
         }
         //private void CheckObjectListChanged(object? sender, DebrisListChangedEventArgs e)
         //{

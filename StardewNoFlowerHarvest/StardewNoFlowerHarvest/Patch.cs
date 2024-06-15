@@ -19,6 +19,14 @@ namespace StopFlowerHarvests
                 {
                     return HarvestMethod.Scythe;
                 }
+                if (__instance.GetData().HarvestItemId.Equals("376") && ModEntry.Config.Poppy)
+                {
+                    return HarvestMethod.Scythe;
+                }
+                if (__instance.GetData().HarvestItemId.Equals("597") && ModEntry.Config.BlueJazz)
+                {
+                    return HarvestMethod.Scythe;
+                }
                 return __result;
             }
             catch (Exception)
